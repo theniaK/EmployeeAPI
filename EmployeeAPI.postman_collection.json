@@ -55,7 +55,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " {\r\n    \"Parthenia\": [\r\n        \"Software Engineer\"\r\n    ],    \r\n    \r\n    \"Maria\": [\r\n        \"Software Engineer\"\r\n    ]\r\n}",
+					"raw": "{\r\n    \"Maria\": [\r\n        \"UI/UX\"\r\n    ],\r\n    \"Hans\":[\r\n        \"DenOps\"\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -78,6 +78,42 @@
 			"response": []
 		},
 		{
+			"name": "Post Employee",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Thenia Koutrouli\",\r\n    \"Description\": \"Software developer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5000/api/Employees/post",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Employees",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get Employees",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
@@ -91,7 +127,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " {\r\n    \"Parthenia\": [\r\n        \"Software Engineer\"\r\n    ],    \r\n    \r\n    \"Maria\": [\r\n        \"Software Engineer\"\r\n    ]\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -128,7 +164,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " {\r\n    \"Parthenia\": [\r\n        \"Software Engineer\"\r\n    ],    \r\n    \r\n    \"Maria\": [\r\n        \"Software Engineer\"\r\n    ]\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -136,7 +172,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:5000/api/Employees/get/d301bc1b-d4c1-4c0e-a69f-9f7edde7e443",
+					"raw": "https://localhost:5000/api/Employees/get/b2a6c10a-0e1b-47a5-8ba8-fa446fd5ebed",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -146,7 +182,44 @@
 						"api",
 						"Employees",
 						"get",
-						"d301bc1b-d4c1-4c0e-a69f-9f7edde7e443"
+						"b2a6c10a-0e1b-47a5-8ba8-fa446fd5ebed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5000/api/Employees/delete/b7d1b98a-1d7c-4fdc-b672-07380fb81979",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Employees",
+						"delete",
+						"b7d1b98a-1d7c-4fdc-b672-07380fb81979"
 					]
 				}
 			},
@@ -183,80 +256,6 @@
 						"api",
 						"Employees",
 						"delete"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Employee",
-			"protocolProfileBehavior": {
-				"strictSSL": false
-			},
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://localhost:5000/api/Employees/delete/758de2e0-4c36-4aec-8894-769776a1c9af",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"Employees",
-						"delete",
-						"758de2e0-4c36-4aec-8894-769776a1c9af"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Udpate Employee",
-			"protocolProfileBehavior": {
-				"strictSSL": false
-			},
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": " {\r\n    \"Parthenia new\": [\r\n        \"Software Engineer\"\r\n    ]\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://localhost:5000/api/Employees/update/e6e0a8de-14e2-49dd-a5dd-0ecaaaecec1c",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"Employees",
-						"update",
-						"e6e0a8de-14e2-49dd-a5dd-0ecaaaecec1c"
 					]
 				}
 			},
